@@ -1,0 +1,32 @@
+# Medidas DAX
+
+## Total de Transações
+
+```DAX
+Total de Transações = 
+COUNTROWS(bank_transactions_clean)
+```
+
+## Valor Total Movimentado
+
+```DAX
+Valor Total Movimentado = 
+SUM(bank_transactions_clean[TransactionAmount])
+```
+
+## Ticket Médio
+
+```DAX
+Ticket Médio = 
+AVERAGE(bank_transactions_clean[TransactionAmount])
+```
+
+## % Transações Suspeitas
+
+```DAX
+% Transações Suspeitas = 
+DIVIDE(
+    [Total Transações Suspeitas];
+    [Total de Transações]
+)
+```
